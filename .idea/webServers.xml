@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="021ee001-c655-4b9b-8742-5957cff6f05f" name="Xampp" url="http://localhost/2darbas">
+        <fileTransfer mountedRoot="C:\xampp\htdocs\2darbas" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
