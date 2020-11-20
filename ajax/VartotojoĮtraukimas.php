@@ -72,6 +72,31 @@ include "config.php";
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Registruotis</a>
                         </div>
+                        <!--user Modal-->
+                        <div id="userModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Vartotojo įtraukimas</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Vartotojo vardas</label>
+                                        <input type="text" name="vvardas" id="vvardas" class="form-control" />
+                                        <br />
+                                        <label>Užsakymo Nr.</label>
+                                        <input type="text" name="vuzsakymas" id="vuzsakymas" class="form-control" />
+                                        <br />
+                                        <label>Email</label>
+                                        <input type="text" name="vemail" id="vemail" class="form-control" />
+                                        <br />
+                                        <button type="button" name="insertUser_button" id="insertUser_button" class="btn btn-warning" >Įterpti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
                     </li>
                 </ul>
             </div>
@@ -79,6 +104,7 @@ include "config.php";
         <!--Vartotoju lentele-->
         <div class="container-fluid">
             <h1 class="mt-4">Vartotojo įtraukimas</h1>
+            <p><button type="button " name="userInsert" id="userInsert" class="btn btn-primary" data-toggle="modal" data-target="#userModal">Įtraukti vartotoją</button></p>
             <p> <table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
                     <th>Vardas</th>
@@ -160,6 +186,27 @@ include "config.php";
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+    });
+    $(document).ready(function(){
+        $("#insertUser_button").click(function(){
+            var name=$("#vvardas").val();
+            var nr=$("#vuzsakymas").val();
+            var email=$("#vemail").val();
+            $.ajax({
+                url:'insertUser.php',
+                method:'POST',
+                data:{
+                    name:name,
+                    nr:nr,
+                    email:email
+                },
+                success:function(data){
+                    alert(data);
+                    $('#userModal').hide();
+                    location.reload();
+                }
+            });
+        });
     });
 </script>
 

@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/MedžiagosĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/MedžiagosĮtraukimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/PrekėsĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/PrekėsĮtraukimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/registerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/registerAdmin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +69,8 @@
       <workItem from="1605611808752" duration="11404000" />
       <workItem from="1605681650688" duration="13765000" />
       <workItem from="1605780531197" duration="5639000" />
+      <workItem from="1605786545099" duration="295000" />
+      <workItem from="1605868651872" duration="3632000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1605786050039</created>
@@ -55,15 +79,35 @@
       <option name="project" value="LOCAL" />
       <updated>1605786050039</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2nd commit">
+      <created>1605786661585</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605786661585</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="2nd commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2nd commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605618459371">
@@ -78,18 +122,18 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1605784982091" />
-    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1605783409005">
+    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1605870817381">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605783409005" />
+    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605870817381" />
     <state x="461" y="185" key="SettingsEditor" timestamp="1605696116015">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605696116015" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605786104917">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605786824340">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1605786104917" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1605786824340" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1605622438954">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

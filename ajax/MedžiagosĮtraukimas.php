@@ -73,13 +73,38 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Registruotis</a>
                         </div>
+                        <!--material Modal-->
+                        <div id="materialModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Medžiagos įtraukimas</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Medžiagos pavadinimas</label>
+                                        <input type="text" name="mpavadinimas" id="mpavadinimas" class="form-control" />
+                                        <br />
+                                        <label>Medžiagos tipas</label>
+                                        <input type="text" name="mtipas" id="mtipas" class="form-control" />
+                                        <br />
+                                        <label>Medžiagos kiekis</label>
+                                        <input type="text" name="mkiekis" id="mkiekis" class="form-control" />
+                                        <br />
+                                        <button type="button" name="insertMaterial_button" id="insertMaterial_button" class="btn btn-warning" >Įterpti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
                     </li>
                 </ul>
             </div>
         </nav>
-        <br/>
         <div class="container-fluid">
             <h1 class="mt-4">Medžiagos įtraukimas</h1>
+            <p><button type="button " name="materialInsert" id="materialInsert" class="btn btn-primary" data-toggle="modal" data-target="#materialModal">Įtraukti medžiagą</button></p>
             <p><table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
                     <th>Pavadinimas</th>
@@ -119,6 +144,27 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+    });
+    $(document).ready(function(){
+        $("#insertMaterial_button").click(function(){
+            var name=$("#mpavadinimas").val();
+            var email=$("#mtipas").val();
+            var type=$("#mkiekis").val();
+            $.ajax({
+                url:'insertMaterial.php',
+                method:'POST',
+                data:{
+                    name:name,
+                    email:email,
+                    type:type
+                },
+                success:function(data){
+                    alert(data);
+                    $('#materialModal').hide();
+                    location.reload();
+                }
+            });
+        });
     });
 </script>
 

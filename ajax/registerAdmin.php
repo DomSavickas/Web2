@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -121,6 +122,29 @@ session_start();
 
         <div class="container-fluid">
             <h1 class="mt-4">Registruoti Adminą</h1>
+            <button type="button " name="register" id="register" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Registruoti adminą</button>
+            <p><table border='1' class='float-left' style='border-collapse: collapse;'>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>password</th>
+                </tr>
+                <?php
+                $query = "select * from admin_login";
+                $result = mysqli_query($con,$query);
+                while($row = mysqli_fetch_array($result)){
+                    $id = $row['admin_id'];
+                    $admin_name = $row['admin_name'];
+                    $admin_password = $row['admin_password'];
+
+                    echo "<tr>";
+                    echo "<td>".$id."</td>";
+                    echo "<td>".$admin_name."</td>";
+                    echo "<td>".$admin_password."</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </table></p>
             <br />
             <?php
             if(isset($_SESSION['username']))
@@ -138,7 +162,6 @@ session_start();
                 <?php
             }
             ?>
-            <button type="button " name="register" id="register" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Registruoti adminą</button>
         </div>
     </div>
     <!-- /#page-content-wrapper -->

@@ -73,6 +73,31 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Registruotis</a>
                         </div>
+                        <!--product Modal-->
+                        <div id="productModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Prekės įtraukimas</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Prekės pavadinimas</label>
+                                        <input type="text" name="ppavadinimas" id="ppavadinimas" class="form-control" />
+                                        <br />
+                                        <label>Prekės tipas</label>
+                                        <input type="text" name="ptipas" id="ptipas" class="form-control" />
+                                        <br />
+                                        <label>Prekės kiekis</label>
+                                        <input type="text" name="pkiekis" id="pkiekis" class="form-control" />
+                                        <br />
+                                        <button type="button" name="insertProduct_button" id="insertProduct_button" class="btn btn-warning" >Įterpti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
                     </li>
                 </ul>
             </div>
@@ -80,6 +105,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
 
         <div class="container-fluid">
             <h1 class="mt-4">Prekės įtraukimas</h1>
+            <p><button type="button " name="productInsert" id="productInsert" class="btn btn-primary" data-toggle="modal" data-target="#productModal">Įtraukti prekę</button></p>
             <p><table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
                     <th>Pavadinimas</th>
@@ -119,6 +145,27 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+    });
+    $(document).ready(function(){
+        $("#insertProduct_button").click(function(){
+            var name=$("#ppavadinimas").val();
+            var type=$("#ptipas").val();
+            var amount=$("#pkiekis").val();
+            $.ajax({
+                url:'insertProduct.php',
+                method:'POST',
+                data:{
+                    name:name,
+                    type:type,
+                    amount:amount
+                },
+                success:function(data){
+                    alert(data);
+                    $('#productModal').hide();
+                    location.reload();
+                }
+            });
+        });
     });
 </script>
 
