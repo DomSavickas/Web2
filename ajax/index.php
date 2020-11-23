@@ -37,9 +37,13 @@ session_start();
               Papildomos funkcijos
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="papildomos">
-              <a class="dropdown-item" href="#">Papildoma1</a>
+              <a class="dropdown-item" href="#">Duomenų bazių schemos</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Papildoma2</a>
+              <a class="dropdown-item" href="#">Puslapio žemėlapis</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Failo koregavimas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Susisiekite</a>
           </div>
       </div>
     </div>
