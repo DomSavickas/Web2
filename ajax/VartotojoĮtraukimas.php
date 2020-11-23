@@ -97,6 +97,53 @@ include "config.php";
                             </div>
                         </div>
                         <!--End Modal-->
+                        <!--user del Modal-->
+                        <div id="userDelModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Vartotojo Šalinimas</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Vartotojo ID</label>
+                                        <input type="text" name="delvid" id="delvid" class="form-control" />
+                                        <br />
+                                        <button type="button" name="deleteUser_button" id="deleteUser_button" class="btn btn-warning" >Šalinti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
+                        <!--user edit Modal-->
+                        <div id="userEditModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Vartotojo koregavimas</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Vartotojo ID</label>
+                                        <input type="text" name="evid" id="evid" class="form-control" />
+                                        <br />
+                                        <label>Vartotojo vardas</label>
+                                        <input type="text" name="evvardas" id="evvardas" class="form-control" />
+                                        <br />
+                                        <label>Užsakymo Nr.</label>
+                                        <input type="text" name="evuzsakymas" id="evuzsakymas" class="form-control" />
+                                        <br />
+                                        <label>Email</label>
+                                        <input type="text" name="evemail" id="evemail" class="form-control" />
+                                        <br />
+                                        <button type="button" name="editUser_button" id="editUser_button" class="btn btn-warning" >Koreguoti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
                     </li>
                 </ul>
             </div>
@@ -104,12 +151,15 @@ include "config.php";
         <!--Vartotoju lentele-->
         <div class="container-fluid">
             <h1 class="mt-4">Vartotojo įtraukimas</h1>
-            <p><button type="button " name="userInsert" id="userInsert" class="btn btn-primary" data-toggle="modal" data-target="#userModal">Įtraukti vartotoją</button></p>
+            <p><button type="button " name="userInsert" id="userInsert" class="btn btn-primary" data-toggle="modal" data-target="#userModal">Įtraukti vartotoją</button>
+                <button type="button " name="userDel" id="userDel" class="btn btn-primary" data-toggle="modal" data-target="#userDelModal">Šalinti vartotoją</button>
+                <button type="button " name="userEdit" id="userEdit" class="btn btn-primary" data-toggle="modal" data-target="#userEditModal">Koreguoti vartotoją</button></p>
             <p> <table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
+                    <th>Id</th>
                     <th>Vardas</th>
+                    <th>Užsakymo Nr.</th>
                     <th>Email</th>
-                    <th>&nbsp;</th>
                 </tr>
                 <?php
                 $query = "select * from vartotojas";
@@ -117,12 +167,17 @@ include "config.php";
                 while($row = mysqli_fetch_array($result)){
                     $id = $row['id'];
                     $vardas = $row['vartotojas'];
+                    $unr = $row['uzsakymoNr'];
                     $email = $row['email'];
 
                     echo "<tr>";
+                    echo "<td>".$id."</td>";
                     echo "<td>".$vardas."</td>";
+                    echo "<td>".$unr."</td>";
                     echo "<td>".$email."</td>";
+                    /*
                     echo "<td><button data-id='".$id."' class='userinfo'>Info</button></td>";
+                     */
                     echo "</tr>";
                 }
                 ?>
@@ -203,6 +258,46 @@ include "config.php";
                 success:function(data){
                     alert(data);
                     $('#userModal').hide();
+                    location.reload();
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#deleteUser_button").click(function(){
+            var id=$("#delvid").val();
+            $.ajax({
+                url:'deleteUser.php',
+                method:'POST',
+                data:{
+                    id:id
+                },
+                success:function(data){
+                    alert(data);
+                    $('#userDelModal').hide();
+                    location.reload();
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#editUser_button").click(function(){
+            var id=$("#evid").val();
+            var name=$("#evvardas").val();
+            var nr=$("#evuzsakymas").val();
+            var email=$("#evemail").val();
+            $.ajax({
+                url:'editUser.php',
+                method:'POST',
+                data:{
+                    id:id,
+                    name:name,
+                    nr:nr,
+                    email:email
+                },
+                success:function(data){
+                    alert(data);
+                    $('#userEditModal').hide();
                     location.reload();
                 }
             });

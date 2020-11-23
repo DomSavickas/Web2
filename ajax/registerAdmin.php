@@ -115,6 +115,50 @@ include "config.php";
                             </div>
                         </div>
                         <!--End Modal-->
+                        <!--Admin del Modal-->
+                        <div id="registerDelModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Admin šalinimas</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Admin ID</label>
+                                        <input type="text" name="delaid" id="delaid" class="form-control" />
+                                        <br />
+                                        <button type="button" name="deleteAdmin_button" id="deleteAdmin_button" class="btn btn-warning" >Šalinti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
+                        <!--Admin edit Modal-->
+                        <div id="registerEditModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Koreguoti admin</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Admin ID</label>
+                                        <input type="text" name="eaid" id="eaid" class="form-control" />
+                                        <br />
+                                        <label>Admin vardas</label>
+                                        <input type="text" name="eausername" id="eausername" class="form-control" />
+                                        <br />
+                                        <label>Admin slaptažodis</label>
+                                        <input type="password" name="eapassword" id="eapassword" class="form-control" />
+                                        <br />
+                                        <button type="button" name="editAdmin_button" id="editAdmin_button" class="btn btn-warning" >Koreguoti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
                     </li>
                 </ul>
             </div>
@@ -122,7 +166,9 @@ include "config.php";
 
         <div class="container-fluid">
             <h1 class="mt-4">Registruoti Adminą</h1>
-            <button type="button " name="register" id="register" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Registruoti adminą</button>
+            <p><button type="button " name="register" id="register" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Registruoti adminą</button>
+                <button type="button " name="delAdmin" id="delAdmin" class="btn btn-primary" data-toggle="modal" data-target="#registerDelModal">Šalinti adminą</button>
+                <button type="button " name="editAdmin" id="editAdmin" class="btn btn-primary" data-toggle="modal" data-target="#registerEditModal">Koreguoti adminą</button></p>
             <p><table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
                     <th>id</th>
@@ -225,17 +271,55 @@ include "config.php";
     $(document).ready(function(){
         $("#register_button").click(function(){
             var name=$("#ausername").val();
-            var email=$("#apassword").val();
+            var pass=$("#apassword").val();
             $.ajax({
                 url:'register.php',
                 method:'POST',
                 data:{
                     name:name,
-                    email:email
+                    pass:pass
                 },
                 success:function(data){
                     alert(data);
                     $('#registerModal').hide();
+                    location.reload();
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#deleteAdmin_button").click(function(){
+            var id=$("#delaid").val();
+            $.ajax({
+                url:'deleteAdmin.php',
+                method:'POST',
+                data:{
+                    id:id
+                },
+                success:function(data){
+                    alert(data);
+                    $('#registerDelModal').hide();
+                    location.reload();
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#editAdmin_button").click(function(){
+            var id=$("#eaid").val();
+            var name=$("#eausername").val();
+            var pass=$("#eapassword").val();
+            $.ajax({
+                url:'editAdmin.php',
+                method:'POST',
+                data:{
+                    id:id,
+                    name:name,
+                    pass:pass
+                },
+                success:function(data){
+                    alert(data);
+                    $('#registerEditModal').hide();
                     location.reload();
                 }
             });

@@ -74,12 +74,87 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                             <a class="dropdown-item" href="#">Registruotis</a>
                         </div>
                     </li>
+                    <!--material Modal-->
+                    <div id="orderInsertModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Užsakymo įtraukimas</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <label>Vartotojo ID</label>
+                                    <input type="text" name="uvarid" id="uvarid" class="form-control" />
+                                    <br />
+                                    <label>Vartotojo email</label>
+                                    <input type="text" name="uvaremail" id="uvaremail" class="form-control" />
+                                    <br />
+                                    <label>Vartotojo tel.</label>
+                                    <input type="text" name="uvartel" id="uvartel" class="form-control" />
+                                    <br />
+                                    <button type="button" name="insertOrder_button" id="insertOrder_button" class="btn btn-warning" >Įterpti</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Modal-->
+                    <!--material Modal-->
+                    <div id="orderDelModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Užsakymo šalinimas</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <label>Užsakymo ID</label>
+                                    <input type="text" name="deluordid" id="deluordid" class="form-control" />
+                                    <br />
+                                    <button type="button" name="delOrder_button" id="delOrder_button" class="btn btn-warning" >Šalinti</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Modal-->
+                    <!--material Modal-->
+                    <div id="orderEditModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Užsakymo koregavimas</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <label>Užsakymo ID</label>
+                                    <input type="text" name="euordid" id="euordid" class="form-control" />
+                                    <br />
+                                    <label>Vartotojo ID</label>
+                                    <input type="text" name="euvarid" id="euvarid" class="form-control" />
+                                    <br />
+                                    <label>Vartotojo email</label>
+                                    <input type="text" name="euvaremail" id="euvaremail" class="form-control" />
+                                    <br />
+                                    <label>Vartotojo tel.</label>
+                                    <input type="text" name="euvartel" id="euvartel" class="form-control" />
+                                    <br />
+                                    <button type="button" name="editOrder_button" id="editOrder_button" class="btn btn-warning" >Koreguoti</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Modal-->
                 </ul>
             </div>
         </nav>
 
         <div class="container-fluid">
             <h1 class="mt-4">Užsakymų įtraukimas</h1>
+            <p><button type="button " name="orderInsert" id="orderInsert" class="btn btn-primary" data-toggle="modal" data-target="#orderInsertModal">Įtraukti užsakymą</button>
+                <button type="button " name="orderDelete" id="orderDelete" class="btn btn-primary" data-toggle="modal" data-target="#orderDelModal">Šalinti užsakymą</button>
+                <button type="button " name="orderEdit" id="orderEdit" class="btn btn-primary" data-toggle="modal" data-target="#orderEditModal">Koreguoti užsakymą</button></p>
             <p><table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
                     <th>id</th>
@@ -121,6 +196,67 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+    });
+    $(document).ready(function(){
+        $("#insertOrder_button").click(function(){
+            var name=$("#uvarid").val();
+            var email=$("#uvaremail").val();
+            var tel=$("#uvartel").val();
+            $.ajax({
+                url:'insertOrder.php',
+                method:'POST',
+                data:{
+                    name:name,
+                    email:email,
+                    tel:tel
+                },
+                success:function(data){
+                    alert(data);
+                    $('#orderInsertModal').hide();
+                    location.reload();
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#delOrder_button").click(function(){
+            var id=$("#deluordid").val();
+            $.ajax({
+                url:'deleteOrder.php',
+                method:'POST',
+                data:{
+                    id:id
+                },
+                success:function(data){
+                    alert(data);
+                    $('#orderDelModal').hide();
+                    location.reload();
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#editOrder_button").click(function(){
+            var uid=$("#euordid").val();
+            var vid=$("#euvarid").val();
+            var email=$("#euvaremail").val();
+            var tel=$("#euvartel").val();
+            $.ajax({
+                url:'editOrder.php',
+                method:'POST',
+                data:{
+                    uid:uid,
+                    vid:vid,
+                    email:email,
+                    tel:tel
+                },
+                success:function(data){
+                    alert(data);
+                    $('#orderEditModal').hide();
+                    location.reload();
+                }
+            });
+        });
     });
 </script>
 

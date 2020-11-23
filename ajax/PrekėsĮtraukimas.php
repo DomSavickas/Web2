@@ -98,6 +98,53 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                             </div>
                         </div>
                         <!--End Modal-->
+                        <!--product del Modal-->
+                        <div id="productDelModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Prekės šalinimas</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Prekės ID</label>
+                                        <input type="text" name="pid" id="pid" class="form-control" />
+                                        <br />
+                                        <button type="button" name="deleteProduct_button" id="deleteProduct_button" class="btn btn-warning" >Šalinti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
+                        <!--product edit Modal-->
+                        <div id="productEditModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Koreguoti prekę</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Prekės ID</label>
+                                        <input type="text" name="peid" id="peid" class="form-control" />
+                                        <br />
+                                        <label>Prekės pavadinimas</label>
+                                        <input type="text" name="pepavadinimas" id="pepavadinimas" class="form-control" />
+                                        <br />
+                                        <label>Prekės tipas</label>
+                                        <input type="text" name="petipas" id="petipas" class="form-control" />
+                                        <br />
+                                        <label>Prekės kiekis</label>
+                                        <input type="text" name="pekiekis" id="pekiekis" class="form-control" />
+                                        <br />
+                                        <button type="button" name="editProduct_button" id="editProduct_button" class="btn btn-warning" >Koreguoti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
                     </li>
                 </ul>
             </div>
@@ -105,9 +152,12 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
 
         <div class="container-fluid">
             <h1 class="mt-4">Prekės įtraukimas</h1>
-            <p><button type="button " name="productInsert" id="productInsert" class="btn btn-primary" data-toggle="modal" data-target="#productModal">Įtraukti prekę</button></p>
+            <p><button type="button " name="productInsert" id="productInsert" class="btn btn-primary" data-toggle="modal" data-target="#productModal">Įtraukti prekę</button>
+                <button type="button " name="productDelete" id="productDelete" class="btn btn-primary" data-toggle="modal" data-target="#productDelModal">Ištrinti prekę</button>
+                <button type="button " name="productEdit" id="productEdit" class="btn btn-primary" data-toggle="modal" data-target="#productEditModal">Koreguoti prekę</button></p>
             <p><table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
+                    <th>Id</th>
                     <th>Pavadinimas</th>
                     <th>Tipas</th>
                     <th>Kiekis</th>
@@ -122,6 +172,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                     $kiekis = $row['kiekis'];
 
                     echo "<tr>";
+                    echo "<td>".$id."</td>";
                     echo "<td>".$pavadinimas."</td>";
                     echo "<td>".$tipas."</td>";
                     echo "<td>".$kiekis."</td>";
@@ -162,6 +213,46 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#productModal').hide();
+                    location.reload();
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#deleteProduct_button").click(function(){
+            var id=$("#pid").val();
+            $.ajax({
+                url:'deleteProduct.php',
+                method:'POST',
+                data:{
+                    id:id,
+                },
+                success:function(data){
+                    alert(data);
+                    $('#productDelModal').hide();
+                    location.reload();
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#editProduct_button").click(function(){
+            var id=$("#peid").val();
+            var name=$("#pepavadinimas").val();
+            var type=$("#petipas").val();
+            var amount=$("#pekiekis").val();
+            $.ajax({
+                url:'editProduct.php',
+                method:'POST',
+                data:{
+                    id:id,
+                    name:name,
+                    type:type,
+                    amount:amount
+                },
+                success:function(data){
+                    alert(data);
+                    $('#productEditModal').hide();
                     location.reload();
                 }
             });

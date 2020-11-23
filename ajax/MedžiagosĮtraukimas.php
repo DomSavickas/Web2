@@ -98,15 +98,65 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                             </div>
                         </div>
                         <!--End Modal-->
+                        <!--material del Modal-->
+                        <div id="materialDelModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Medžiagos ištrinimas</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Medžiagos id</label>
+                                        <input type="text" name="mid" id="mid" class="form-control" />
+                                        <br />
+                                        <button type="button" name="deleteMaterial_button" id="deleteMaterial_button" class="btn btn-warning" >Ištrinti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
+                        <!--material edit Modal-->
+                        <div id="materialEditModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Medžiagos koregavimas</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Medžiagos id</label>
+                                        <input type="text" name="meid" id="meid" class="form-control" />
+                                        <br />
+                                        <label>Medžiagos pavadinimas</label>
+                                        <input type="text" name="mepavadinimas" id="mepavadinimas" class="form-control" />
+                                        <br />
+                                        <label>Medžiagos tipas</label>
+                                        <input type="text" name="metipas" id="metipas" class="form-control" />
+                                        <br />
+                                        <label>Medžiagos kiekis</label>
+                                        <input type="text" name="mekiekis" id="mekiekis" class="form-control" />
+                                        <br />
+                                        <button type="button" name="editMaterial_button" id="editMaterial_button" class="btn btn-warning" >Koreguoti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="container-fluid">
             <h1 class="mt-4">Medžiagos įtraukimas</h1>
-            <p><button type="button " name="materialInsert" id="materialInsert" class="btn btn-primary" data-toggle="modal" data-target="#materialModal">Įtraukti medžiagą</button></p>
+            <p><button type="button " name="materialInsert" id="materialInsert" class="btn btn-primary" data-toggle="modal" data-target="#materialModal">Įtraukti medžiagą</button>
+            <button type="button " name="materialDelete" id="materialDelete" class="btn btn-primary" data-toggle="modal" data-target="#materialDelModal">Ištrinti medžiagą</button>
+                <button type="button " name="materialEdit" id="materialEdit" class="btn btn-primary" data-toggle="modal" data-target="#materialEditModal">Koreguoti medžiagą</button></p>
             <p><table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
+                    <th>Id</th>
                     <th>Pavadinimas</th>
                     <th>Tipas</th>
                     <th>Kiekis</th>
@@ -121,6 +171,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                     $kiekis = $row['kiekis'];
 
                     echo "<tr>";
+                    echo "<td>".$id."</td>";
                     echo "<td>".$pavadinimas."</td>";
                     echo "<td>".$tipas."</td>";
                     echo "<td>".$kiekis."</td>";
@@ -161,6 +212,46 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#materialModal').hide();
+                    location.reload();
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#deleteMaterial_button").click(function(){
+            var id=$("#mid").val();
+            $.ajax({
+                url:'deleteMaterial.php',
+                method:'POST',
+                data:{
+                    id:id
+                },
+                success:function(data){
+                    alert(data);
+                    $('#materialDelModal').hide();
+                    location.reload();
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#editMaterial_button").click(function(){
+            var id=$("#meid").val();
+            var name=$("#mepavadinimas").val();
+            var type=$("#metipas").val();
+            var amount=$("#mekiekis").val();
+            $.ajax({
+                url:'editMaterial.php',
+                method:'POST',
+                data:{
+                    id:id,
+                    name:name,
+                    type:type,
+                    amount:amount
+                },
+                success:function(data){
+                    alert(data);
+                    $('#materialEditModal').hide();
                     location.reload();
                 }
             });
