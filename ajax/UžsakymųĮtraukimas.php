@@ -38,9 +38,13 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 Papildomos funkcijos
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="papildomos">
-                <a class="dropdown-item" href="#">Papildoma1</a>
+                <a class="dropdown-item" href="#">Duomenų bazių schemos</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Papildoma2</a>
+                <a class="dropdown-item" href="#">Puslapio žemėlapis</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="failoKoregavimas.php">Failo koregavimas</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="susisiekite.php">Susisiekite</a>
             </div>
         </div>
     </div>
@@ -62,18 +66,25 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                         <a class="nav-link" href="index.php">Pradžia <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Apie</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Prisijungimas
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Prisijungti</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Registruotis</a>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Apie</button>
+                        <!-- Modal -->
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Apie</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Tinklapis sukurtas VU Knf studento Dominyko Savicko ISKS9.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Uždaryti</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
+                        <!-- Modal content end-->
                     <!--material Modal-->
                     <div id="orderInsertModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">

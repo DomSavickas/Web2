@@ -1,5 +1,6 @@
 <?php
 session_start();
+setcookie("user", "", "", 1, 1)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,9 +42,9 @@ session_start();
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Puslapio žemėlapis</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Failo koregavimas</a>
+              <a class="dropdown-item" href="failoKoregavimas.php">Failo koregavimas</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Susisiekite</a>
+              <a class="dropdown-item" href="susisiekite.php">Susisiekite</a>
           </div>
       </div>
     </div>
