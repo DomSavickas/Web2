@@ -1,0 +1,3 @@
+Admin vardas: Tomas Kondrotas 
+Admin id: 2 
+Protokolas: TESTAS 

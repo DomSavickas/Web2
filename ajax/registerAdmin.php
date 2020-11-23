@@ -282,7 +282,7 @@ include "config.php";
                 success:function(data){
                     alert(data);
                     $('#registerModal').hide();
-                    location.reload();
+                    location.replace("registerAdmin.php");
                 }
             });
         });
@@ -299,7 +299,7 @@ include "config.php";
                 success:function(data){
                     alert(data);
                     $('#registerDelModal').hide();
-                    location.reload();
+                    location.replace("registerAdmin.php");
                 }
             });
         });
@@ -320,7 +320,7 @@ include "config.php";
                 success:function(data){
                     alert(data);
                     $('#registerEditModal').hide();
-                    location.reload();
+                    location.replace("registerAdmin.php");
                 }
             });
         });

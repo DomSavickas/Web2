@@ -165,7 +165,9 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
             <h1 class="mt-4">Medžiagos įtraukimas</h1>
             <p><button type="button " name="materialInsert" id="materialInsert" class="btn btn-primary" data-toggle="modal" data-target="#materialModal">Įtraukti medžiagą</button>
             <button type="button " name="materialDelete" id="materialDelete" class="btn btn-primary" data-toggle="modal" data-target="#materialDelModal">Ištrinti medžiagą</button>
-                <button type="button " name="materialEdit" id="materialEdit" class="btn btn-primary" data-toggle="modal" data-target="#materialEditModal">Koreguoti medžiagą</button></p>
+                <button type="button " name="materialEdit" id="materialEdit" class="btn btn-primary" data-toggle="modal" data-target="#materialEditModal">Koreguoti medžiagą</button>
+                <button class="btn btn-primary" id="PrintButton"  onclick="printDiv('printableArea')">Spausdinti lentelę</button></p>
+            <div id="printableArea">
             <p><table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
                     <th>Id</th>
@@ -191,6 +193,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 }
                 ?>
             </table></p>
+            </div>
         </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -224,7 +227,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#materialModal').hide();
-                    location.reload();
+                    location.replace("MedžiagosĮtraukimas.php");
                 }
             });
         });
@@ -241,7 +244,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#materialDelModal').hide();
-                    location.reload();
+                    location.replace("MedžiagosĮtraukimas.php");
                 }
             });
         });
@@ -264,11 +267,17 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#materialEditModal').hide();
-                    location.reload();
+                    location.replace("MedžiagosĮtraukimas.php");
                 }
             });
         });
     });
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        location.replace("MedžiagosĮtraukimas.php");
+    }
 </script>
 
 </body>

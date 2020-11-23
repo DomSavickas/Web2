@@ -1,11 +1,11 @@
 <?php
 include "C:/xampp/htdocs/2darbas/ajax/config.php";
+include "downloadFile.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="2 laboratorinis darbas">
@@ -92,7 +92,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Failo koregavimas</h4>
+                                        <h4 class="modal-title">Protokolo koregavimas</h4>
                                     </div>
                                     <div class="modal-body">
                                             <label>Vardas pavardė</label>
@@ -117,8 +117,9 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
         </nav>
 
         <div class="container-fluid">
-            <h1 class="mt-4">Failo koregavimas</h1>
-            <p><button type="button " name="email" id="email" class="btn btn-primary" data-toggle="modal" data-target="#failoModal">Koreguoti failą</button></p>
+            <h1 class="mt-4">Protokolo koregavimas</h1>
+            <p><button type="button " name="editProtocol" id="editProtocol" class="btn btn-primary" data-toggle="modal" data-target="#failoModal">Koreguoti protokolą</button>
+            <a class="btn btn-primary" href="downloadFile.php?path=Ataskaita.txt">Atsisiūsti protokolą</a></p>
         </div>
     </div>
     <!-- Footer -->
@@ -153,9 +154,8 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                     protocol:protocol
                 },
                 success:function(data){
-                    alert(data);
                     $('#failoModal').hide();
-                    location.reload();
+                    location.replace("failoKoregavimas.php");
                 }
             });
         });

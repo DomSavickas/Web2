@@ -166,7 +166,9 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
             <h1 class="mt-4">Prekės įtraukimas</h1>
             <p><button type="button " name="productInsert" id="productInsert" class="btn btn-primary" data-toggle="modal" data-target="#productModal">Įtraukti prekę</button>
                 <button type="button " name="productDelete" id="productDelete" class="btn btn-primary" data-toggle="modal" data-target="#productDelModal">Ištrinti prekę</button>
-                <button type="button " name="productEdit" id="productEdit" class="btn btn-primary" data-toggle="modal" data-target="#productEditModal">Koreguoti prekę</button></p>
+                <button type="button " name="productEdit" id="productEdit" class="btn btn-primary" data-toggle="modal" data-target="#productEditModal">Koreguoti prekę</button>
+                <button class="btn btn-primary" id="PrintButton"  onclick="printDiv('printableArea')">Spausdinti lentelę</button></p>
+            <div id="printableArea">
             <p><table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
                     <th>Id</th>
@@ -192,6 +194,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 }
                 ?>
             </table></p>
+            </div>
         </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -225,7 +228,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#productModal').hide();
-                    location.reload();
+                    location.replace("PrekėsĮtraukimas.php");
                 }
             });
         });
@@ -242,7 +245,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#productDelModal').hide();
-                    location.reload();
+                    location.replace("PrekėsĮtraukimas.php");
                 }
             });
         });
@@ -265,11 +268,17 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#productEditModal').hide();
-                    location.reload();
+                    location.replace("PrekėsĮtraukimas.php");
                 }
             });
         });
     });
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        location.replace("PrekėsĮtraukimas.php");
+    }
 </script>
 
 </body>

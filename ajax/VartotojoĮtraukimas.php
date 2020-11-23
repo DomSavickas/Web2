@@ -271,7 +271,7 @@ include "config.php";
                 success:function(data){
                     alert(data);
                     $('#userModal').hide();
-                    location.reload();
+                    location.replace("VartotojoĮtraukimas.php");
                 }
             });
         });
@@ -288,7 +288,7 @@ include "config.php";
                 success:function(data){
                     alert(data);
                     $('#userDelModal').hide();
-                    location.reload();
+                    location.replace("VartotojoĮtraukimas.php");
                 }
             });
         });
@@ -311,7 +311,7 @@ include "config.php";
                 success:function(data){
                     alert(data);
                     $('#userEditModal').hide();
-                    location.reload();
+                    location.replace("VartotojoĮtraukimas.php");
                 }
             });
         });

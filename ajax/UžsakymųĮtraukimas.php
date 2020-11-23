@@ -165,7 +165,9 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
             <h1 class="mt-4">Užsakymų įtraukimas</h1>
             <p><button type="button " name="orderInsert" id="orderInsert" class="btn btn-primary" data-toggle="modal" data-target="#orderInsertModal">Įtraukti užsakymą</button>
                 <button type="button " name="orderDelete" id="orderDelete" class="btn btn-primary" data-toggle="modal" data-target="#orderDelModal">Šalinti užsakymą</button>
-                <button type="button " name="orderEdit" id="orderEdit" class="btn btn-primary" data-toggle="modal" data-target="#orderEditModal">Koreguoti užsakymą</button></p>
+                <button type="button " name="orderEdit" id="orderEdit" class="btn btn-primary" data-toggle="modal" data-target="#orderEditModal">Koreguoti užsakymą</button>
+                <button class="btn btn-primary" id="PrintButton"  onclick="printDiv('printableArea')">Spausdinti lentelę</button></p>
+            <div id="printableArea">
             <p><table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
                     <th>id</th>
@@ -191,6 +193,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 }
                 ?>
             </table></p>
+            </div>
         </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -224,7 +227,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#orderInsertModal').hide();
-                    location.reload();
+                    location.replace("UžsakymųĮtraukimas.php");
                 }
             });
         });
@@ -241,7 +244,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#orderDelModal').hide();
-                    location.reload();
+                    location.replace("UžsakymųĮtraukimas.php");
                 }
             });
         });
@@ -264,11 +267,17 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#orderEditModal').hide();
-                    location.reload();
+                    location.replace("UžsakymųĮtraukimas.php");
                 }
             });
         });
     });
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        location.replace("UžsakymųĮtraukimas.php");
+    }
 </script>
 
 </body>
