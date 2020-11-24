@@ -38,11 +38,11 @@ setcookie("user", "", "", 1, 1)
               Papildomos funkcijos
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="papildomos">
-              <a class="dropdown-item" href="#">Duomenų bazių schemos</a>
+              <a class="dropdown-item" href="duomSchemos.php">Duomenų bazių schemos</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Puslapio žemėlapis</a>
+              <a class="dropdown-item" href="puslapioZemelapis.php">Puslapio žemėlapis</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="failoKoregavimas.php">Failo koregavimas</a>
+              <a class="dropdown-item" href="failoKoregavimas.php">Protokolo koregavimas</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="susisiekite.php">Susisiekite</a>
           </div>
@@ -155,6 +155,9 @@ setcookie("user", "", "", 1, 1)
               }
               ?>
       </div>
+        <!-- Footer -->
+        <footer><div class="footer-copyright text-center fixed-bottom py-3">© 2020 Copyright: Dominykas Savickas, dominykas.savickas@knf.stud.vu.lt</div></footer>
+        <!-- Footer -->
     </div>
     <!-- /#page-content-wrapper -->
 

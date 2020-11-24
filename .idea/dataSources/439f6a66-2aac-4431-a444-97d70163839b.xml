@@ -1033,8 +1033,6 @@
     </collation>
     <user id="330" parent="1" name="pma">
       <Host>localhost</Host>
-      <ObjectGrants>SELECT,INSERT,UPDATE,DELETE|phpmyadmin:null
-</ObjectGrants>
     </user>
     <user id="331" parent="1" name="root">
       <Host>127.0.0.1</Host>
@@ -1105,7 +1103,7 @@
     </column>
     <column id="348" parent="335" name="kiekis">
       <Position>4</Position>
-      <DataType>int(100)|0s</DataType>
+      <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="349" parent="335" name="PRIMARY">
@@ -1131,7 +1129,7 @@
     </column>
     <column id="353" parent="336" name="kiekis">
       <Position>4</Position>
-      <DataType>int(100)|0s</DataType>
+      <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="354" parent="336" name="PRIMARY">

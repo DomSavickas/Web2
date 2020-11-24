@@ -1,11 +1,11 @@
 <?php
 include "C:/xampp/htdocs/2darbas/ajax/config.php";
+include "downloadFile.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="2 laboratorinis darbas">
@@ -38,11 +38,11 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 Papildomos funkcijos
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="papildomos">
-                <a class="dropdown-item" href="duomSchemos.php">Duomenų bazių schemos</a>
+                <a class="dropdown-item" href="#">Duomenų bazių schemos</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="puslapioZemelapis.php">Puslapio žemėlapis</a>
+                <a class="dropdown-item" href="#">Puslapio žemėlapis</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="failoKoregavimas.php">Protokolo koregavimas</a>
+                <a class="dropdown-item" href="failoKoregavimas.php">Failo koregavimas</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="susisiekite.php">Susisiekite</a>
             </div>
@@ -83,48 +83,32 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                                 </div>
                             </div>
                         </div>
-                        <!-- Modal content end-->
-
-                        <!--Email Modal-->
-                        <div id="emailModal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Susisiekite</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="https://getform.io/f/942441c7-d0cd-433d-b642-8da4cbc6e907" method="POST">
-                                        <label>Vardas</label>
-                                        <input type="text" name="vardas" id="vardas" class="form-control" />
-                                        <br />
-                                        <label>E-mail (jūsų)</label>
-                                        <input type="text" name="email" id="email" class="form-control" />
-                                        <br />
-                                        <label>Pranešimas</label>
-                                        <input type="text" name="pranesimas" id="pranesimas" class="form-control" />
-                                        <br />
-                                        <button type="submit" name="sendEmail" id="sendEmail" class="btn btn-warning" >Siūsti</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Modal-->
                     </li>
                 </ul>
             </div>
         </nav>
+
         <div class="container-fluid">
-            <h1 class="mt-4">Susisiekite</h1>
-            <p><button type="button " name="email" id="email" class="btn btn-primary" data-toggle="modal" data-target="#emailModal">Susisiekite</button></p>
+            <h1 class="mt-4">Puslapio žemėlapis</h1>
+                <ul>
+                    <li><h2><a href="forNotRegisteredUser.php">Prisijungimo puslapis</a></h2></li>
+                    <li><h5><a href="index.php">Prisijungusio Admin pagrindinis puslapis</a></h5></li>
+                    <li><h5><a href="MedžiagosĮtraukimas.php">Admin medžiagų valdymas</a></h5></li>
+                    <li><h5><a href="VartotojoĮtraukimas.php">Admin vartotojų įtraukimas</a></h5></li>
+                    <li><h5><a href="PrekėsĮtraukimas.php">Admin prekė įtraukimas</a></h5></li>
+                    <li><h5><a href="UžsakymųĮtraukimas.php">Admin užsakymų įtraukimas</a></h5></li>
+                    <li><h6><a href="duomSchemos.php">Duomenų bazių schemos</a></h6></li>
+                    <li><h6><a href="puslapioZemelapis.php">Puslapio žemėlapis</a></h6></li>
+                    <li><h6><a href="failoKoregavimas.php">Failo koregavimas</a></h6></li>
+                    <li><h6><a href="susisiekite.php">Susisiekite</a></h6></li>
+                </ul>
         </div>
         <!-- Footer -->
         <footer><div class="footer-copyright text-center fixed-bottom py-3">© 2020 Copyright: Dominykas Savickas, dominykas.savickas@knf.stud.vu.lt</div></footer>
         <!-- Footer -->
     </div>
     <!-- /#page-content-wrapper -->
+
 </div>
 <!-- /#wrapper -->
 
@@ -138,10 +122,28 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
-
+    $(document).ready(function(){
+        $("#sendFile").click(function(){
+            var name=$("#fvardas").val();
+            var id=$("#faid").val();
+            var protocol=$("#fprotokolas").val();
+            $.ajax({
+                url:'sendFile.php',
+                method:'POST',
+                data:{
+                    name:name,
+                    id:id,
+                    protocol:protocol
+                },
+                success:function(data){
+                    $('#failoModal').hide();
+                    location.replace("failoKoregavimas.php");
+                }
+            });
+        });
+    });
 </script>
 
 </body>
 
 </html>
-

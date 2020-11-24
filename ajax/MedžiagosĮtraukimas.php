@@ -38,11 +38,11 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 Papildomos funkcijos
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="papildomos">
-                <a class="dropdown-item" href="#">Duomenų bazių schemos</a>
+                <a class="dropdown-item" href="duomSchemos.php">Duomenų bazių schemos</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Puslapio žemėlapis</a>
+                <a class="dropdown-item" href="puslapioZemelapis.php">Puslapio žemėlapis</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="failoKoregavimas.php">Failo koregavimas</a>
+                <a class="dropdown-item" href="failoKoregavimas.php">Protokolo koregavimas</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="susisiekite.php">Susisiekite</a>
             </div>
@@ -157,6 +157,25 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                             </div>
                         </div>
                         <!--End Modal-->
+                        <!--material count Modal-->
+                        <div id="materialCountModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Medžiagų skaičiavimas</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Medžiagos kiekis</label>
+                                        <input type="text" name="amkiekis" id="amkiekis" class="form-control" />
+                                        <br />
+                                        <button type="button" name="countMaterial_button" id="countMaterial_button" class="btn btn-warning" >Apskaičiuoti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
                     </li>
                 </ul>
             </div>
@@ -166,7 +185,8 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
             <p><button type="button " name="materialInsert" id="materialInsert" class="btn btn-primary" data-toggle="modal" data-target="#materialModal">Įtraukti medžiagą</button>
             <button type="button " name="materialDelete" id="materialDelete" class="btn btn-primary" data-toggle="modal" data-target="#materialDelModal">Ištrinti medžiagą</button>
                 <button type="button " name="materialEdit" id="materialEdit" class="btn btn-primary" data-toggle="modal" data-target="#materialEditModal">Koreguoti medžiagą</button>
-                <button class="btn btn-primary" id="PrintButton"  onclick="printDiv('printableArea')">Spausdinti lentelę</button></p>
+                <button class="btn btn-primary" id="PrintButton"  onclick="printDiv('printableArea')">Spausdinti lentelę</button>
+                <button type="button " name="countAmount" id="countAmount" class="btn btn-primary" data-toggle="modal" data-target="#materialCountModal">Medžiagų skaičius pagal kiekį</button></p>
             <div id="printableArea">
             <p><table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
@@ -195,6 +215,9 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
             </table></p>
             </div>
         </div>
+        <!-- Footer -->
+        <footer><div class="footer-copyright text-center fixed-bottom py-3">© 2020 Copyright: Dominykas Savickas, dominykas.savickas@knf.stud.vu.lt</div></footer>
+        <!-- Footer -->
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -267,6 +290,23 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#materialEditModal').hide();
+                    location.replace("MedžiagosĮtraukimas.php");
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#countMaterial_button").click(function(){
+            var amount=$("#amkiekis").val();
+            $.ajax({
+                url:'countMaterial.php',
+                method:'POST',
+                data:{
+                    amount:amount
+                },
+                success:function(data){
+                    alert(data);
+                    $('#materialCountModal').hide();
                     location.replace("MedžiagosĮtraukimas.php");
                 }
             });

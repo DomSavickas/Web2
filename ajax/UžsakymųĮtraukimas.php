@@ -38,11 +38,11 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 Papildomos funkcijos
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="papildomos">
-                <a class="dropdown-item" href="#">Duomenų bazių schemos</a>
+                <a class="dropdown-item" href="duomSchemos.php">Duomenų bazių schemos</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Puslapio žemėlapis</a>
+                <a class="dropdown-item" href="puslapioZemelapis.php">Puslapio žemėlapis</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="failoKoregavimas.php">Failo koregavimas</a>
+                <a class="dropdown-item" href="failoKoregavimas.php">Protokolo koregavimas</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="susisiekite.php">Susisiekite</a>
             </div>
@@ -85,7 +85,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                             </div>
                         </div>
                         <!-- Modal content end-->
-                    <!--material Modal-->
+                    <!--order Modal-->
                     <div id="orderInsertModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                             <!-- Modal content-->
@@ -110,7 +110,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                         </div>
                     </div>
                     <!--End Modal-->
-                    <!--material Modal-->
+                    <!--order del Modal-->
                     <div id="orderDelModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                             <!-- Modal content-->
@@ -129,7 +129,7 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                         </div>
                     </div>
                     <!--End Modal-->
-                    <!--material Modal-->
+                    <!--order edit Modal-->
                     <div id="orderEditModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                             <!-- Modal content-->
@@ -157,6 +157,28 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                         </div>
                     </div>
                     <!--End Modal-->
+                        <!--order find Modal-->
+                        <div id="orderFindModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Surasti vartotoją</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label>Vartotojo ID</label>
+                                        <input type="text" name="fvartotojoid" id="fvartotojoid" class="form-control" />
+                                        <br />
+                                        <label>Užsakymo Nr</label>
+                                        <input type="text" name="fuzsakymonr" id="fuzsakymonr" class="form-control" />
+                                        <br />
+                                        <button type="button" name="findOrder_button" id="findOrder_button" class="btn btn-warning" >Ieškoti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
                 </ul>
             </div>
         </nav>
@@ -166,7 +188,8 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
             <p><button type="button " name="orderInsert" id="orderInsert" class="btn btn-primary" data-toggle="modal" data-target="#orderInsertModal">Įtraukti užsakymą</button>
                 <button type="button " name="orderDelete" id="orderDelete" class="btn btn-primary" data-toggle="modal" data-target="#orderDelModal">Šalinti užsakymą</button>
                 <button type="button " name="orderEdit" id="orderEdit" class="btn btn-primary" data-toggle="modal" data-target="#orderEditModal">Koreguoti užsakymą</button>
-                <button class="btn btn-primary" id="PrintButton"  onclick="printDiv('printableArea')">Spausdinti lentelę</button></p>
+                <button class="btn btn-primary" id="PrintButton"  onclick="printDiv('printableArea')">Spausdinti lentelę</button>
+                <button type="button " name="findUser" id="findUser" class="btn btn-primary" data-toggle="modal" data-target="#orderFindModal">Surasti vartotojo duomenis</button></p>
             <div id="printableArea">
             <p><table border='1' class='float-left' style='border-collapse: collapse;'>
                 <tr>
@@ -195,7 +218,11 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
             </table></p>
             </div>
         </div>
+        <!-- Footer -->
+        <footer><div class="footer-copyright text-center fixed-bottom py-3">© 2020 Copyright: Dominykas Savickas, dominykas.savickas@knf.stud.vu.lt</div></footer>
+        <!-- Footer -->
     </div>
+
     <!-- /#page-content-wrapper -->
 
 </div>
@@ -267,6 +294,25 @@ include "C:/xampp/htdocs/2darbas/ajax/config.php";
                 success:function(data){
                     alert(data);
                     $('#orderEditModal').hide();
+                    location.replace("UžsakymųĮtraukimas.php");
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#findOrder_button").click(function(){
+            var id=$("#fvartotojoid").val();
+            var number=$("#fuzsakymonr").val();
+            $.ajax({
+                url:'findOrder.php',
+                method:'POST',
+                data:{
+                    id:id,
+                    number:number
+                },
+                success:function(data){
+                    alert(data);
+                    $('#orderFindModal').hide();
                     location.replace("UžsakymųĮtraukimas.php");
                 }
             });

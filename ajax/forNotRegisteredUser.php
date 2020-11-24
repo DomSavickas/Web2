@@ -144,6 +144,9 @@ session_start();
             ?>
 
         </div>
+        <!-- Footer -->
+        <footer><div class="footer-copyright text-center fixed-bottom py-3">© 2020 Copyright: Dominykas Savickas, dominykas.savickas@knf.stud.vu.lt</div></footer>
+        <!-- Footer -->
     </div>
     <!-- /#page-content-wrapper -->
 

@@ -19,16 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Added file writing">
+    <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Added print functionality">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/439f6a66-2aac-4431-a444-97d70163839b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/439f6a66-2aac-4431-a444-97d70163839b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/Ataskaita.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/Ataskaita.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/MedžiagosĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/MedžiagosĮtraukimas.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/PrekėsĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/PrekėsĮtraukimas.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/UžsakymųĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/UžsakymųĮtraukimas.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/failoKoregavimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/failoKoregavimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/registerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/registerAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/sendFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/sendFile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/susisiekite.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/susisiekite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/systemAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/systemAdmin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +62,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\2darbas\ajax" />
+      <recent name="C:\xampp\htdocs\2darbas\assets\img" />
       <recent name="C:\xampp\htdocs\2darbas" />
     </key>
   </component>
@@ -77,7 +81,8 @@
       <workItem from="1605868651872" duration="3780000" />
       <workItem from="1606124879477" duration="7260000" />
       <workItem from="1606136278524" duration="6851000" />
-      <workItem from="1606156120970" duration="9266000" />
+      <workItem from="1606156120970" duration="9331000" />
+      <workItem from="1606213926122" duration="16526000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1605786050039</created>
@@ -121,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606143124753</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added print functionality">
+      <created>1606166920668</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606166920668</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +158,8 @@
     <MESSAGE value="Finished sql tables" />
     <MESSAGE value="Added more dropdown elements" />
     <MESSAGE value="Added file writing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added file writing" />
+    <MESSAGE value="Added print functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added print functionality" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605618459371">
@@ -161,18 +174,18 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1605784982091" />
-    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1606157638405">
+    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1606225868819">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606157638405" />
+    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606225868819" />
     <state x="461" y="185" key="SettingsEditor" timestamp="1605696116015">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605696116015" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606143153723">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606166930114">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606143153723" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606166930114" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1605622438954">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
