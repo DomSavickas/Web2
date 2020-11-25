@@ -7,11 +7,12 @@ session_start();
 <head>
 
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> <!--XSS apsaugai-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="2 laboratorinis darbas">
     <meta name="author" content="DominykasSavickasISKS9">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Žemėlapis</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/js/bootstrap.min.css" rel="stylesheet">

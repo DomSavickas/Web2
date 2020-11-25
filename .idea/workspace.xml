@@ -19,7 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Hashing complete">
+    <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Bug fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/MedžiagosĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/MedžiagosĮtraukimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/PrekėsĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/PrekėsĮtraukimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/UžsakymųĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/UžsakymųĮtraukimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/deleteAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/deleteAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/duomSchemos.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/duomSchemos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/failoKoregavimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/failoKoregavimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/puslapioZemelapis.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/puslapioZemelapis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/registerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/registerAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/sadminPusalpioZemelapis.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/sadminPusalpioZemelapis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/susisiekite.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/susisiekite.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/systemAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/systemAdmin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +58,7 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ajax/action.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ajax/deleteAdmin.php" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -54,6 +68,16 @@
       <recent name="C:\xampp\htdocs\2darbas\assets\img" />
       <recent name="C:\xampp\htdocs\2darbas" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="tests" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/ajax/deleteAdmin.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="Xampp_PHP_MariaDB" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,7 +96,8 @@
       <workItem from="1606136278524" duration="6851000" />
       <workItem from="1606156120970" duration="9331000" />
       <workItem from="1606213926122" duration="16724000" />
-      <workItem from="1606302604423" duration="7568000" />
+      <workItem from="1606302604423" duration="7618000" />
+      <workItem from="1606327070057" duration="4183000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1605786050039</created>
@@ -137,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606310554154</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Bug fixes">
+      <created>1606310874650</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1606310874650</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,37 +197,38 @@
     <MESSAGE value="Added print functionality" />
     <MESSAGE value="Security left" />
     <MESSAGE value="Hashing complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hashing complete" />
+    <MESSAGE value="Bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="598" y="176" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606309182602">
+    <state x="598" y="176" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606330573543">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="598" y="176" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606309182602" />
+    <state x="598" y="176" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606330573543" />
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605614699385">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605614699385" />
-    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1606306884184">
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1606330572012">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1606306884184" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1606310128008">
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1606330572012" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1606330787024">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606310128008" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1606310128007">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606330787024" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1606330787024">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606310128007" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1606310128007">
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606330787024" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1606330787024">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606310128007" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1606310128008">
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606330787024" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1606330787024">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606310128008" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606330787024" />
     <state x="794" y="463" key="NewPhpFileDialog" timestamp="1606308856951">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -204,10 +237,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605696116015" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606310564772">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606310879744">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606310564772" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606310879744" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1605622438954">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
