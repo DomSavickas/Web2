@@ -129,7 +129,7 @@ session_start();
                 ?>
             <div align="center">
                 <h2 class="mt-4">Sveikiname prisijungus - <?php echo $_SESSION['sadusername']; ?></h2><br />
-                <a href="forNotRegisteredUser.php" id="sadlogout">logout</a>
+                <a href="forNotRegisteredUser.php" id="sadlogout">Atsijungti</a>
             </div>
                 <?php
             }

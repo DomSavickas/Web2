@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Security left">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/action.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/editAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/editAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/register.php" afterDir="false" />
+    <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Hashing complete">
+      <change beforePath="$PROJECT_DIR$/ajax/systemAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/systemAdmin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +72,7 @@
       <workItem from="1606136278524" duration="6851000" />
       <workItem from="1606156120970" duration="9331000" />
       <workItem from="1606213926122" duration="16724000" />
-      <workItem from="1606302604423" duration="7200000" />
+      <workItem from="1606302604423" duration="7568000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1605786050039</created>
@@ -134,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606231932869</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Hashing complete">
+      <created>1606310554154</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606310554154</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +164,8 @@
     <MESSAGE value="Added file writing" />
     <MESSAGE value="Added print functionality" />
     <MESSAGE value="Security left" />
-    <option name="LAST_COMMIT_MESSAGE" value="Security left" />
+    <MESSAGE value="Hashing complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hashing complete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="598" y="176" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606309182602">
@@ -200,10 +204,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605696116015" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606231993339">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606310564772">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606231993339" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606310564772" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1605622438954">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
