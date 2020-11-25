@@ -19,19 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Added print functionality">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/439f6a66-2aac-4431-a444-97d70163839b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/439f6a66-2aac-4431-a444-97d70163839b.xml" afterDir="false" />
+    <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Security left">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/MedžiagosĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/MedžiagosĮtraukimas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/PrekėsĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/PrekėsĮtraukimas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/UžsakymųĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/UžsakymųĮtraukimas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/failoKoregavimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/failoKoregavimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/action.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/editAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/editAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/registerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/registerAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/susisiekite.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/susisiekite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/systemAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/systemAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +48,7 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PhpstormProjects/komandinistestavimui" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ajax/action.php" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -82,7 +75,8 @@
       <workItem from="1606124879477" duration="7260000" />
       <workItem from="1606136278524" duration="6851000" />
       <workItem from="1606156120970" duration="9331000" />
-      <workItem from="1606213926122" duration="16526000" />
+      <workItem from="1606213926122" duration="16724000" />
+      <workItem from="1606302604423" duration="7200000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1605786050039</created>
@@ -133,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606166920668</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Security left">
+      <created>1606231932869</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1606231932869</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,33 +160,50 @@
     <MESSAGE value="Added more dropdown elements" />
     <MESSAGE value="Added file writing" />
     <MESSAGE value="Added print functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added print functionality" />
+    <MESSAGE value="Security left" />
+    <option name="LAST_COMMIT_MESSAGE" value="Security left" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605618459371">
+    <state x="598" y="176" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606309182602">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605618459371" />
+    <state x="598" y="176" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606309182602" />
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605614699385">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605614699385" />
-    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1605784982091">
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1606306884184">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1605784982091" />
-    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1606225868819">
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1606306884184" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1606310128008">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606225868819" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606310128008" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1606310128007">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606310128007" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1606310128007">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606310128007" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1606310128008">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606310128008" />
+    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1606308856951">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606308856951" />
     <state x="461" y="185" key="SettingsEditor" timestamp="1605696116015">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605696116015" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606166930114">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606231993339">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606166930114" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606231993339" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1605622438954">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

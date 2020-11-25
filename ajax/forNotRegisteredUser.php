@@ -168,7 +168,7 @@ session_start();
                 $.ajax({
                     url:"action.php",
                     method:"POST",
-                    data: {username:username, password:password},
+                    data:{username:username, password:password},
                     success:function(data)
                     {
                         //alert(data);
@@ -184,7 +184,7 @@ session_start();
                     }
                 });
             }
-            else
+        else
             {
                 alert("Užpildykite abu laukus");
             }
