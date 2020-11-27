@@ -19,21 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Užbaigta">
+    <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Užbaigtas ir bug fixai">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/Ataskaita.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/Ataskaita.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/MedžiagosĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/MedžiagosĮtraukimas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/PrekėsĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/PrekėsĮtraukimas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/UžsakymųĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/UžsakymųĮtraukimas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/failoKoregavimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/failoKoregavimas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/puslapioZemelapis.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/puslapioZemelapis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/registerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/registerAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/sadminPusalpioZemelapis.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/sadminPusalpioZemelapis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/susisiekite.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/susisiekite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/systemAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/systemAdmin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +86,7 @@
       <workItem from="1606302604423" duration="7618000" />
       <workItem from="1606327070057" duration="4272000" />
       <workItem from="1606385481465" duration="3005000" />
-      <workItem from="1606469427881" duration="3023000" />
+      <workItem from="1606469427881" duration="3572000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1605786050039</created>
@@ -184,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606388472067</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Užbaigtas ir bug fixai">
+      <created>1606475743816</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1606475743816</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +210,8 @@
     <MESSAGE value="Bug fixes" />
     <MESSAGE value="XSS fix and started SQL Injections" />
     <MESSAGE value="Užbaigta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Užbaigta" />
+    <MESSAGE value="Užbaigtas ir bug fixai" />
+    <option name="LAST_COMMIT_MESSAGE" value="Užbaigtas ir bug fixai" />
   </component>
   <component name="WindowStateProjectService">
     <state x="598" y="176" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606330573543">
@@ -254,10 +250,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605696116015" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606388482455">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606475755180">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606388482455" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606475755180" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1605622438954">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
