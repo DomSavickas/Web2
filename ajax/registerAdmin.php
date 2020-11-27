@@ -175,7 +175,6 @@ include "config.php";
                 <tr>
                     <th>id</th>
                     <th>name</th>
-                    <th>password</th>
                 </tr>
                 <?php
                 $query = "select * from admin_login";
@@ -183,12 +182,10 @@ include "config.php";
                 while($row = mysqli_fetch_array($result)){
                     $id = $row['admin_id'];
                     $admin_name = $row['admin_name'];
-                    $admin_password = $row['admin_password'];
 
                     echo "<tr>";
                     echo "<td>".$id."</td>";
                     echo "<td>".$admin_name."</td>";
-                    echo "<td>".$admin_password."</td>";
                     echo "</tr>";
                 }
                 ?>

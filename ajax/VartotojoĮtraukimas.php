@@ -7,7 +7,7 @@ include "config.php";
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> <!--XSS apsaugai-->
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="2 laboratorinis darbas">
     <meta name="author" content="DominykasSavickasISKS9">

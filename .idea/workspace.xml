@@ -21,7 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3f1f6e9a-cce1-4ce8-aa49-b7e5efbc6179" name="Default Changelist" comment="Užbaigtas ir bug fixai">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/Ataskaita.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/Ataskaita.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/VartotojoĮtraukimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/failoKoregavimas.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/failoKoregavimas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/forNotRegisteredUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/registerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/registerAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/systemAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/systemAdmin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +92,7 @@
       <workItem from="1606302604423" duration="7618000" />
       <workItem from="1606327070057" duration="4272000" />
       <workItem from="1606385481465" duration="3005000" />
-      <workItem from="1606469427881" duration="3572000" />
+      <workItem from="1606469427881" duration="8290000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1605786050039</created>
@@ -179,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606475743816</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Užbaigtas ir bug fixai">
+      <created>1606476235549</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1606476235549</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,10 +263,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605696116015" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606475755180">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606476242279">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606475755180" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606476242279" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1605622438954">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
