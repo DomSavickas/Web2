@@ -20,7 +20,7 @@ include "config.php";
     <link href="../assets/css/simple-sidebar.css" rel="stylesheet">
     <script src="../assets/js/jquery-3.1.1.min.js"></script>
 </head>
-
+<header></header>
 <body>
 
 <div class="d-flex" id="wrapper">

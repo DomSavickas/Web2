@@ -22,7 +22,7 @@ session_start();
     <link href="../assets/css/simple-sidebar.css" rel="stylesheet">
 
 </head>
-
+<header></header>
 <body>
 <div class="d-flex" id="wrapper">
 
@@ -30,7 +30,7 @@ session_start();
     <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="sidebar-heading">Hexa ĮVA</div>
         <div class="list-group list-group-flush">
-            <a href="systemAdmin.php" class="list-group-item list-group-item-action bg-light">Prisijungimas/Registracija</a>
+            <a href="forNotRegisteredUser.php" class="list-group-item list-group-item-action bg-light">Prisijungimas/Registracija</a>
             </a>
         </div>
     </div>
@@ -49,7 +49,7 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="systemAdmin.php">Pradžia <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="forNotRegisteredUser.php">Pradžia <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Apie</button>

@@ -21,7 +21,7 @@ session_start();
     <link href="../assets/css/simple-sidebar.css" rel="stylesheet">
 
 </head>
-
+<header></header>
 <body>
 <div class="d-flex" id="wrapper">
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-setcookie("user", "", "", 1, 1)
+setcookie("user", 123,0, "index.php","", TRUE, TRUE);
 ?>
 <!DOCTYPE html>
 <html lang="en">
